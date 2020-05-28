@@ -1,9 +1,26 @@
-alert("olá");
+import { home } from "./home/index.js";
+import { anime } from "./animes/index.js";
 
-async function loadTest () {
-    let load = await fetch("http://localhost:8000/"); 
-    let loadTwo = await load.json();  
-    console.log(loadTwo);
+const main = document.querySelector("#main");
+
+const changePages = () => {
+    window.addEventListener("hashchange", () => {
+        main.innerHTML = "";
+        switch (window.location.hash) {
+            case "":
+                main.appendChild(home());
+                break;
+            case "#animes":
+                main.appendChild(anime());
+                break;
+            default:
+                main.appendChild(home());
+
+        }
+    })
 }
 
-loadTest();
+window.addEventListener("load", () => {
+    main.appendChild(home());
+    changePages();
+})

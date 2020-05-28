@@ -1,0 +1,10 @@
+.header {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.footer {
+    text-align: center;
+    position: relative;
+    top: 90vh;
+}
