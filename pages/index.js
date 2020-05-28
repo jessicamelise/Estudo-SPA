@@ -1,5 +1,5 @@
 import { home } from "./home/index.js";
-import { anime } from "./animes/index.js";
+import { naruto } from "./naruto/index.js";
 
 const main = document.querySelector("#main");
 
