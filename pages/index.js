@@ -10,8 +10,8 @@ const changePages = () => {
       case "":
         main.appendChild(home());
         break;
-      case "#animes":
-        main.appendChild(anime());
+      case "#naruto":
+        main.appendChild(naruto());
         break;
       default:
         main.appendChild(home());
