@@ -1,5 +1,6 @@
 import { home } from "./home/index.js";
 import { naruto } from "./naruto/index.js";
+import { deathNote } from "./death-note/index.js";
 
 const main = document.querySelector("#main");
 
@@ -12,6 +13,9 @@ const changePages = () => {
         break;
       case "#naruto":
         main.appendChild(naruto());
+        break;
+      case "#death-note":
+        main.appendChild(deathNote());
         break;
       default:
         main.appendChild(home());
